@@ -96,8 +96,8 @@
       <file leaf-file-name="tcp.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/demo/server/tcp.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="30" column="3" lean-forward="true" selection-start-line="30" selection-start-column="3" selection-end-line="30" selection-end-column="3" />
+            <state relative-caret-position="334">
+              <caret line="36" column="13" lean-forward="true" selection-start-line="36" selection-start-column="13" selection-end-line="36" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -203,7 +203,7 @@
     <servers />
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="y" value="23" />
     <option name="width" value="1280" />
     <option name="height" value="773" />
@@ -328,7 +328,7 @@
       <updated>1519577864346</updated>
       <workItem from="1520358368720" duration="1251000" />
       <workItem from="1520359992631" duration="552000" />
-      <workItem from="1524370861535" duration="5617000" />
+      <workItem from="1524370861535" duration="6822000" />
     </task>
     <task id="LOCAL-00001" summary="补充内容">
       <created>1524411752774</created>
@@ -351,16 +351,31 @@
       <option name="project" value="LOCAL" />
       <updated>1524412989202</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="测试冲突">
+      <created>1524413200521</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1524413200521</updated>
+    </task>
+    <task id="LOCAL-00005" summary="测试01：未add">
+      <created>1524413805453</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1524413805453</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="7420000" />
+    <option name="totallyTimeSpent" value="8625000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17480916" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17480916" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -397,7 +412,9 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="补充内容" />
     <MESSAGE value="测试tcp服务方法：&#10;1. netstats-anp|grep 9501&#10;2. 通过telnet方式登录远程主机:telnet 127.0.0.1 9501&#10;3. tcp客户端脚本" />
-    <option name="LAST_COMMIT_MESSAGE" value="测试tcp服务方法：&#10;1. netstats-anp|grep 9501&#10;2. 通过telnet方式登录远程主机:telnet 127.0.0.1 9501&#10;3. tcp客户端脚本" />
+    <MESSAGE value="测试冲突" />
+    <MESSAGE value="测试01：未add" />
+    <option name="LAST_COMMIT_MESSAGE" value="测试01：未add" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -744,8 +761,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/demo/server/tcp.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="30" column="3" lean-forward="true" selection-start-line="30" selection-start-column="3" selection-end-line="30" selection-end-column="3" />
+        <state relative-caret-position="334">
+          <caret line="36" column="13" lean-forward="true" selection-start-line="36" selection-start-column="13" selection-end-line="36" selection-end-column="13" />
           <folding />
         </state>
       </provider>
