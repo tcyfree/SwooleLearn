@@ -5,7 +5,7 @@ $serv = new swoole_server("127.0.0.1", 9501);
 
 //swoole_server->set函数用于设置swoole_server运行时的各项参数
 $serv->set([
-    'worker_num' => 6 , // worker进程数 cpu 1-4倍
+    'worker_num' => 6 , // worker进程数，cpu 1-4倍
     'max_request' => 10000,
 ]);
 //监听连接进入事件

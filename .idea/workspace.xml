@@ -2,9 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8ff8fd0c-37b8-49f3-871f-fa86aa3c4490" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/swoole_mooc.iml" afterPath="$PROJECT_DIR$/.idea/swoole_mooc.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/demo/server/tcp.php" afterPath="$PROJECT_DIR$/demo/server/tcp.php" />
     </list>
@@ -99,8 +96,8 @@
       <file leaf-file-name="tcp.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/demo/server/tcp.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="399">
-              <caret line="21" column="18" lean-forward="false" selection-start-line="21" selection-start-column="18" selection-end-line="21" selection-end-column="18" />
+            <state relative-caret-position="133">
+              <caret line="7" column="37" lean-forward="false" selection-start-line="7" selection-start-column="37" selection-end-line="7" selection-end-column="37" />
               <folding />
             </state>
           </provider>
@@ -331,12 +328,20 @@
       <updated>1519577864346</updated>
       <workItem from="1520358368720" duration="1251000" />
       <workItem from="1520359992631" duration="552000" />
-      <workItem from="1524370861535" duration="4171000" />
+      <workItem from="1524370861535" duration="4553000" />
     </task>
+    <task id="LOCAL-00001" summary="补充内容">
+      <created>1524411752774</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1524411752774</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5974000" />
+    <option name="totallyTimeSpent" value="6356000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -374,6 +379,10 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="补充内容" />
+    <option name="LAST_COMMIT_MESSAGE" value="补充内容" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -720,8 +729,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/demo/server/tcp.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="21" column="18" lean-forward="false" selection-start-line="21" selection-start-column="18" selection-end-line="21" selection-end-column="18" />
+        <state relative-caret-position="133">
+          <caret line="7" column="37" lean-forward="false" selection-start-line="7" selection-start-column="37" selection-end-line="7" selection-end-column="37" />
           <folding />
         </state>
       </provider>
