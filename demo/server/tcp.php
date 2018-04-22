@@ -34,7 +34,7 @@ $serv->on('close', function ($serv, $fd) {
 $serv->start();
 
 /**
- * tcp服务方法：
+ * 测试tcp服务器方法：
  * 1. netstats-anp|grep 9501
  * 2.通过telnet方式登录远程主机:telnet 127.0.0.1 9501
  * 3.tcp客户端脚本
