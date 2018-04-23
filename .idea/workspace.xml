@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8ff8fd0c-37b8-49f3-871f-fa86aa3c4490" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/demo/server/tcp.php" afterPath="$PROJECT_DIR$/demo/server/tcp.php" />
     </list>
     <ignored path="swoole_mooc.iws" />
@@ -87,7 +86,7 @@
         <entry file="file://$PROJECT_DIR$/demo/server/tcp.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="571">
-              <caret line="36" column="20" lean-forward="false" selection-start-line="36" selection-start-column="20" selection-end-line="36" selection-end-column="20" />
+              <caret line="36" column="14" lean-forward="true" selection-start-line="36" selection-start-column="14" selection-end-line="36" selection-end-column="14" />
               <folding />
             </state>
           </provider>
@@ -330,7 +329,7 @@
       <workItem from="1520359992631" duration="552000" />
       <workItem from="1524370861535" duration="6822000" />
       <workItem from="1524446410649" duration="58000" />
-      <workItem from="1524446478353" duration="666000" />
+      <workItem from="1524446478353" duration="842000" />
     </task>
     <task id="LOCAL-00001" summary="补充内容">
       <created>1524411752774</created>
@@ -371,7 +370,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="9349000" />
+    <option name="totallyTimeSpent" value="9525000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -742,7 +741,7 @@
     <entry file="file://$PROJECT_DIR$/demo/server/tcp.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="571">
-          <caret line="36" column="20" lean-forward="false" selection-start-line="36" selection-start-column="20" selection-end-line="36" selection-end-column="20" />
+          <caret line="36" column="14" lean-forward="true" selection-start-line="36" selection-start-column="14" selection-end-line="36" selection-end-column="14" />
           <folding />
         </state>
       </provider>
