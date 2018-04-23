@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8ff8fd0c-37b8-49f3-871f-fa86aa3c4490" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/demo/server/tcp.php" afterPath="$PROJECT_DIR$/demo/server/tcp.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/demo/server/tcp.php" afterPath="$PROJECT_DIR$/demo/server/tcp_server.php" />
     </list>
     <ignored path="swoole_mooc.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -72,21 +72,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="tcp_client.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="tcp_client.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/demo/client/tcp_client.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="396">
-              <caret line="18" column="13" lean-forward="false" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+            <state relative-caret-position="330">
+              <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="tcp.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/demo/server/tcp.php">
+      <file leaf-file-name="tcp_server.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/demo/server/tcp_server.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="571">
-              <caret line="36" column="14" lean-forward="true" selection-start-line="36" selection-start-column="14" selection-end-line="36" selection-end-column="14" />
+            <state relative-caret-position="198">
+              <caret line="9" column="3" lean-forward="false" selection-start-line="9" selection-start-column="3" selection-end-line="9" selection-end-column="3" />
               <folding />
             </state>
           </provider>
@@ -240,6 +240,12 @@
               <item name="swoole_mooc" type="b2602c69:ProjectViewProjectNode" />
               <item name="SwooleLearn" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="demo" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="client" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="swoole_mooc" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SwooleLearn" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="demo" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="server" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
           </expand>
@@ -329,7 +335,7 @@
       <workItem from="1520359992631" duration="552000" />
       <workItem from="1524370861535" duration="6822000" />
       <workItem from="1524446410649" duration="58000" />
-      <workItem from="1524446478353" duration="842000" />
+      <workItem from="1524446478353" duration="1570000" />
     </task>
     <task id="LOCAL-00001" summary="补充内容">
       <created>1524411752774</created>
@@ -370,7 +376,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="9525000" />
+    <option name="totallyTimeSpent" value="10253000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -722,14 +728,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/demo/client/tcp_client.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="18" column="13" lean-forward="false" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/demo/coroutine/redis.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="110">
@@ -738,10 +736,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/demo/server/tcp.php">
+    <entry file="file://$PROJECT_DIR$/demo/server/tcp_server.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="571">
-          <caret line="36" column="14" lean-forward="true" selection-start-line="36" selection-start-column="14" selection-end-line="36" selection-end-column="14" />
+        <state relative-caret-position="198">
+          <caret line="9" column="3" lean-forward="false" selection-start-line="9" selection-start-column="3" selection-end-line="9" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/demo/client/tcp_client.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
           <folding />
         </state>
       </provider>
