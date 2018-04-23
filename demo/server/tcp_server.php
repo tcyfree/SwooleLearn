@@ -33,6 +33,8 @@ $serv->on('close', function ($serv, $fd) {
 //启动服务器
 $serv->start();
 
+//当修改配置参数后，平滑重启
+$serv->reload();
 /**
  * 测试tcp服务器方法：
  * 1. netstats-anp|grep 9501
