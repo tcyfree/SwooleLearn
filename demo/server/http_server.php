@@ -5,18 +5,18 @@
  * Date: 18/2/28
  * Time: 上午1:39
  */
-$http = new swoole_http_server("0.0.0.0", 8811);
+$http = new swoole_http_server("0.0.0.0", 9911);
 
 //添加测试一：获取参数并打印出来
 //$http->on('request', function ($request, $response) {
 //    $response->cookie("singwa",'xsssss', time() + 1800);
 //    $response->end('sss'.json_encode($request->get));
-//});
+// });
 
 $http->set(
     [
         'enable_static_handler' => true,
-        'document_root' => "/home/wwwroot/www.lingyuan88.com/swoole/data",
+        'document_root' => "/home/wwwroot/www.lingyuan88.com/public/swoole/data",
     ]
 );
 $http->on('request', function($request, $response) {

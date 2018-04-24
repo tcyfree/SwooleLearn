@@ -6,7 +6,7 @@
  * Time: 下午11:45
  */
 
-$server = new swoole_websocket_server("0.0.0.0", 8812);
+$server = new swoole_websocket_server("0.0.0.0", 9912);
 //$server->set([]);
 $server->set(
     [
