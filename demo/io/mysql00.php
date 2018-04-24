@@ -77,7 +77,6 @@ class AysMysql {
 }
 $obj = new AysMysql();
 $flag = $obj->execute(1, 'singwa-111112');
-$obj = new AysMysql();
 $flag = $obj->execute(1, 'singwa-111112');
 var_dump($flag).PHP_EOL;
 echo "start".PHP_EOL;
