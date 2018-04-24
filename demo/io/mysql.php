@@ -18,7 +18,7 @@ class Singleton{
     //私有化__clone，防止对象被克隆
     private function __clone(){}
     //私有化内部实例化的对象
-    public  $instance = null;
+    private  $instance = null;
     // 公有静态实例方法
     public  function getInstance(){
         if($this->instance == null){
@@ -68,6 +68,7 @@ class AsyncMysql {
      */
     public function execute($id, $username) {
         // connect
+	var_dump($this->dbSource);
         $this->dbSource->connect($this->dbConfig, function($db, $result) use($id, $username)  {
             echo "mysql-connect".PHP_EOL;
             if($result === false) {
@@ -75,8 +76,8 @@ class AsyncMysql {
                 // todo
             }
 
-            //$sql = "select * from test where id=1";
-            $sql = "update test set `username` = '".$username."' where id=".$id;
+            $sql = "select * from cmf_user where id=1";
+            //$sql = "update test set `username` = '".$username."' where id=".$id;
             // insert into
             // query (add select update delete)
             $db->query($sql, function($db, $result){
