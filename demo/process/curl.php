@@ -22,13 +22,15 @@ for($i = 0; $i < 6; $i++) {
     $process = new swoole_process(function(swoole_process $worker) use($i, $urls) {
         // curl
         $content = curlData($urls[$i]);
-        //echo $content.PHP_EOL;
+        //将内容写入管道
+        echo $content.PHP_EOL;
         $worker->write($content.PHP_EOL);
-    }, true);
+    }, false);
     $pid = $process->start();
     $workers[$pid] = $process;
 }
 
+//获取管道内容
 foreach($workers as $process) {
     echo $process->read();
 }
