@@ -98,5 +98,4 @@ class Ws {
         echo "clientid:{$fd}\n";
     }
 }
-
 $obj = new Ws();
