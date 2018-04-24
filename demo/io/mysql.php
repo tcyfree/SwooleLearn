@@ -5,7 +5,7 @@
  * Date: 18/3/11
  * Time: 下午10:40
  */
-class AysMysql {
+class AsyncMysql {
     /**
      * @var string
      */
