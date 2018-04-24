@@ -11,21 +11,21 @@ class Singleton{
      * @var string
      */
     //私有化构造方法，禁止外部实例化对象
-    private function __construct()
+    public function __construct()
     {
-        self::$instance = new Swoole\Mysql;
+        $this->instance = new Swoole\Mysql;
     }
     //私有化__clone，防止对象被克隆
     private function __clone(){}
     //私有化内部实例化的对象
-    private static $instance = null;
+    public  $instance = null;
     // 公有静态实例方法
-    public static function getInstance(){
-        if(self::$instance == null){
+    public  function getInstance(){
+        if($this->instance == null){
             //内部实例化对象
-            self::$instance = new self();
+            $this->instance = new self();
         }
-        return self::$instance;
+        return $this->instance;
     }
 }
 class AsyncMysql {
@@ -48,7 +48,7 @@ class AsyncMysql {
 
     public function __construct() {
         //new swoole_mysql;
-        $this->dbSource = Singleton::getInstance();
+        $this->dbSource = (new Singleton())->getInstance();
 
     }
 
