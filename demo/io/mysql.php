@@ -5,6 +5,29 @@
  * Date: 18/3/11
  * Time: 下午10:40
  */
+// 单例模式（口诀：三私一公）
+class Singleton{
+    /**
+     * @var string
+     */
+    //私有化构造方法，禁止外部实例化对象
+    private function __construct()
+    {
+        self::$instance = new Swoole\Mysql;
+    }
+    //私有化__clone，防止对象被克隆
+    private function __clone(){}
+    //私有化内部实例化的对象
+    private static $instance = null;
+    // 公有静态实例方法
+    public static function getInstance(){
+        if(self::$instance == null){
+            //内部实例化对象
+            self::$instance = new self();
+        }
+        return self::$instance;
+    }
+}
 class AsyncMysql {
     /**
      * @var string
@@ -14,19 +37,19 @@ class AsyncMysql {
      * mysql的配置
      * @var array
      */
-    public $dbConfig = [];
+    public $dbConfig = [
+        'host' => '127.0.0.1',
+        'port' => 3306,
+        'user' => 'root',
+        'password' => 'Lingyuan882018',
+        'database' => 'thinkcmf5',
+        'charset' => 'utf8',
+    ];
+
     public function __construct() {
         //new swoole_mysql;
-        $this->dbSource = new Swoole\Mysql;
+        $this->dbSource = Singleton::getInstance();
 
-        $this->dbConfig = [
-            'host' => '127.0.0.1',
-            'port' => 5123,
-            'user' => 'root',
-            'password' => 123456,
-            'database' => 'swoole',
-            'charset' => 'utf8',
-        ];
     }
 
     public function update() {
@@ -75,7 +98,7 @@ class AsyncMysql {
         return true;
     }
 }
-$obj = new AysMysql();
+$obj = new AsyncMysql();
 $flag = $obj->execute(1, 'singwa-111112');
 var_dump($flag).PHP_EOL;
 echo "start".PHP_EOL;
