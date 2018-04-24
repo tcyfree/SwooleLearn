@@ -21,6 +21,7 @@ class Ws {
                 'task_worker_num' => 2,
             ]
         );
+        //注册Server的事件回调函数
         $this->ws->on("open", [$this, 'onOpen']);
         $this->ws->on("message", [$this, 'onMessage']);
         $this->ws->on("task", [$this, 'onTask']);
@@ -57,12 +58,10 @@ class Ws {
             'task' => 1,
             'fd' => $frame->fd,
         ];
-        //$ws->task($data);
-
-        swoole_timer_after(5000, function() use($ws, $frame) {
-            echo "5s-after\n";
-            $ws->push($frame->fd, "server-time-after:");
-        });
+        //投递异步任务
+        //注意：程序会继续往下执行，不会等待任务执行完后再继续向下执行
+        $ws->task($data);
+        //客户端会马上收到以下信息
         $ws->push($frame->fd, "server-push:".date("Y-m-d H:i:s"));
     }
 
@@ -71,12 +70,13 @@ class Ws {
      * @param $taskId
      * @param $workerId
      * @param $data
+     * @return string
      */
     public function onTask($serv, $taskId, $workerId, $data) {
         print_r($data);
         // 耗时场景 10s
         sleep(10);
-        return "on task finish"; // 告诉worker
+        return "on task finish"; // 告诉worker，返回给onFinish的$data
     }
 
     /**
