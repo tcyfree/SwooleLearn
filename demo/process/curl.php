@@ -16,9 +16,8 @@ $urls = [
     'http://baidu.com?search=singwa2',
     'http://baidu.com?search=imooc',
 ];
-
+//创建多个子进程分别模拟请求URL的内容
 for($i = 0; $i < 6; $i++) {
-    // 子进程
     $process = new swoole_process(function(swoole_process $worker) use($i, $urls) {
         // curl
         $content = curlData($urls[$i]);
