@@ -101,6 +101,8 @@ class AsyncMysql {
 }
 $obj = new AsyncMysql();
 $flag = $obj->execute(1, 'singwa-111112');
+$obj = new AsyncMysql();
+$flag = $obj->execute(1, 'singwa-111112');
 var_dump($flag).PHP_EOL;
 echo "start".PHP_EOL;
 
