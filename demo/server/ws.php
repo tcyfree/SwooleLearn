@@ -9,11 +9,11 @@
 class Ws {
 
     CONST HOST = "0.0.0.0";
-    CONST PORT = 8812;
+    CONST PORT = 9912;
 
     public $ws = null;
     public function __construct() {
-        $this->ws = new swoole_websocket_server("0.0.0.0", 8812);
+        $this->ws = new swoole_websocket_server(self::HOST, self::PORT);
 
         $this->ws->set(
             [
