@@ -23,9 +23,9 @@ for($i = 0; $i < 6; $i++) {
         // curl
         $content = curlData($urls[$i]);
         //将内容写入管道
-        echo $content.PHP_EOL;
+    //    echo $content.PHP_EOL;
         $worker->write($content.PHP_EOL);
-    }, false);
+    }, true);
     $pid = $process->start();
     $workers[$pid] = $process;
 }
