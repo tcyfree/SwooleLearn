@@ -49,7 +49,8 @@ $http->on('request', function($request, $response) use($http){
             $_POST[$k] = $v;
         }
     }
-    
+
+    //开启缓冲区
     ob_start();
     // 执行应用并响应
     try {
@@ -61,6 +62,7 @@ $http->on('request', function($request, $response) use($http){
     }
 
     //echo "-action-".request()->action().PHP_EOL;
+    //获取缓冲区内容
     $res = ob_get_contents();
     ob_end_clean();
     $response->end($res);
