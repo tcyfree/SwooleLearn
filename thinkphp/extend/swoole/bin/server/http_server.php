@@ -37,7 +37,7 @@ $http->on('request', function($request, $response) use($http){
         }
     }
 
-    $_GET = [];//解决上一次输入的变量还存在的问题，方案二：if(!empty($_GET)) {unset($_GET);}
+    $_GET = [];//解决上一次输入的变量还存在的问题，方案二：if(!empty($_GET)) {unset($_GET);}，方案三：$http-close();把上一次的资源包括变量等全部清空
     if(isset($request->get)) {
         foreach($request->get as $k => $v) {
             $_GET[$k] = $v;
@@ -61,11 +61,13 @@ $http->on('request', function($request, $response) use($http){
         // todo
     }
 
+    //输出TP当前请求的控制方法
     //echo "-action-".request()->action().PHP_EOL;
     //获取缓冲区内容
     $res = ob_get_contents();
     ob_end_clean();
     $response->end($res);
+    //把上一次的资源包括变量等全部清空
     //$http->close();
 });
 
