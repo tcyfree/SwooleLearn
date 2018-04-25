@@ -107,9 +107,9 @@ class Console
         }
         $js = <<<JS
 
-<script type='text/javascript'>
+<swoole type='text/javascript'>
 {$lines}
-</script>
+</swoole>
 JS;
         return $js;
     }
