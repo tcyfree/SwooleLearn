@@ -37,7 +37,7 @@ $http->on('request', function($request, $response) use($http){
         }
     }
 
-    $_GET = [];
+    $_GET = [];//解决上一次输入的变量还存在的问题，方案二：if(!empty($_GET)) {unset($_GET);}
     if(isset($request->get)) {
         foreach($request->get as $k => $v) {
             $_GET[$k] = $v;
