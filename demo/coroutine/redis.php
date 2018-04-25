@@ -15,6 +15,9 @@ $http->on('request', function($request, $response) {
     $redis->connect('127.0.0.1', 6379);
     $value = $redis->get($request->get['a']);
 
+    // mysql
+
+    //执行时间取它们中最大的：time = max(redis,mysql)
     $response->header("Content-Type", "text/plain");
     $response->end($value);
 });
