@@ -14,17 +14,20 @@ $http->set(
         'worker_num' => 5,
     ]
 );
+//此事件在Worker进程/Task进程启动时发生,这里创建的对象可以在进程生命周期内使用
 $http->on('WorkerStart', function(swoole_server $server,  $worker_id) {
     // 定义应用目录
     define('APP_PATH', __DIR__ . '/../application/');
     // 加载框架里面的文件
     require __DIR__ . '/../../../../thinkphp/base.php';
-    //require __DIR__ . '/../../../../thinkphp/start.php';
 });
 $http->on('request', function($request, $response) use($http){
-
-    //define('APP_PATH', __DIR__ . '/../application/');
-    //require __DIR__ . '/../thinkphp/base.php';
+    /**
+     * 解决上一次输入的变量还存在的问题
+     * 方案一：if(!empty($_GET)) {unset($_GET);}
+     * 方案二：$http-close();把之前的进程kill，swoole会重新启一个进程，重启会释放内存，把上一次的资源包括变量等全部清空
+     * 方案三：$_SERVER  =  []
+     */
     $_SERVER  =  [];
     if(isset($request->server)) {
         foreach($request->server as $k => $v) {
@@ -37,7 +40,7 @@ $http->on('request', function($request, $response) use($http){
         }
     }
 
-    $_GET = [];//解决上一次输入的变量还存在的问题，方案二：if(!empty($_GET)) {unset($_GET);}，方案三：$http-close();把上一次的资源包括变量等全部清空
+    $_GET = [];
     if(isset($request->get)) {
         foreach($request->get as $k => $v) {
             $_GET[$k] = $v;
@@ -67,10 +70,8 @@ $http->on('request', function($request, $response) use($http){
     $res = ob_get_contents();
     ob_end_clean();
     $response->end($res);
-    //把上一次的资源包括变量等全部清空
+    //把之前的进程kill，swoole会重新启一个进程，重启会释放内存，把上一次的资源包括变量等全部清空
     //$http->close();
 });
 
 $http->start();
-
-// topthink/think-swoole
