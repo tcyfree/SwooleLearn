@@ -431,7 +431,7 @@ class Request
      */
     public function path()
     {
-        if (is_null($this->path)) {
+//        if (is_null($this->path)) {
             $suffix   = $this->config->get('url_html_suffix');
             $pathinfo = $this->pathinfo();
             if (false === $suffix) {
@@ -444,7 +444,7 @@ class Request
                 // 允许任何后缀访问
                 $this->path = preg_replace('/\.' . $this->ext() . '$/i', '', $pathinfo);
             }
-        }
+//        }
 
         return $this->path;
     }
