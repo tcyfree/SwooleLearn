@@ -17,7 +17,7 @@ $http->set(
 //此事件在Worker进程/Task进程启动时发生,这里创建的对象可以在进程生命周期内使用
 $http->on('WorkerStart', function(swoole_server $server,  $worker_id) {
     // 定义应用目录
-    define('APP_PATH', __DIR__ . '/../application/');
+    define('APP_PATH', __DIR__ . '/../../../../application/');
     // 加载框架里面的文件
     require __DIR__ . '/../../../../thinkphp/base.php';
 });
