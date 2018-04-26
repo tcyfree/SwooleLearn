@@ -16,7 +16,7 @@ class Http {
         $this->http->set(
             [
                 'enable_static_handler' => true,
-                'document_root' => "/home/work/hdtocs/swoole_mooc/thinkphp/public/static",
+                'document_root' => "/home/wwwroot/swoole/thinkphp/public/static",
                 'worker_num' => 4,
                 'task_worker_num' => 4,
             ]
@@ -32,6 +32,7 @@ class Http {
     }
 
     /**
+     * 此事件在Worker进程/Task进程启动时发生,这里创建的对象可以在进程生命周期内使用
      * @param $server
      * @param $worker_id
      */
@@ -39,12 +40,12 @@ class Http {
         // 定义应用目录
         define('APP_PATH', __DIR__ . '/../application/');
         // 加载框架里面的文件
-        //require __DIR__ . '/../thinkphp/base.php';
-        require __DIR__ . '/../thinkphp/start.php';
+        require __DIR__ . '/../../../../thinkphp/base.php';
     }
 
     /**
      * request回调
+     * 解决上一次输入的变量还存在的问题例：$_SERVER  =  []
      * @param $request
      * @param $response
      */
@@ -90,41 +91,6 @@ class Http {
         ob_end_clean();
         $response->end($res);
     }
-
-    /**
-     * @param $serv
-     * @param $taskId
-     * @param $workerId
-     * @param $data
-     */
-    public function onTask($serv, $taskId, $workerId, $data) {
-
-        // 分发 task 任务机制，让不同的任务 走不同的逻辑
-        $obj = new app\common\lib\task\Task;
-
-        $method = $data['method'];
-        $flag = $obj->$method($data['data']);
-        /*$obj = new app\common\lib\ali\Sms();
-        try {
-            $response = $obj::sendSms($data['phone'], $data['code']);
-        }catch (\Exception $e) {
-            // todo
-            echo $e->getMessage();
-        }*/
-
-        return $flag; // 告诉worker
-    }
-
-    /**
-     * @param $serv
-     * @param $taskId
-     * @param $data
-     */
-    public function onFinish($serv, $taskId, $data) {
-        echo "taskId:{$taskId}\n";
-        echo "finish-data-sucess:{$data}\n";
-    }
-
     /**
      * close
      * @param $ws
