@@ -22,6 +22,11 @@ $http->on('WorkerStart', function(swoole_server $server,  $worker_id) {
     require __DIR__ . '/../../../../thinkphp/base.php';
 });
 $http->on('request', function($request, $response) use($http){
+    //该方式不用修改thinkphp5源码
+//    // 定义应用目录
+//    define('APP_PATH', __DIR__ . '/../../../../application/');
+//    // 加载框架里面的文件
+//    require_once __DIR__ . '/../../../../thinkphp/base.php';
     /**
      * 解决上一次输入的变量还存在的问题
      * 方案一：if(!empty($_GET)) {unset($_GET);}
