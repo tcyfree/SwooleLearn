@@ -28,6 +28,7 @@ class Send
                 'code' => $code,
             ]
         ];
+        //优化，将对接第三方的接口放入异步任务中
         $_POST['http_server']->task($taskData);
         return Util::show(config('code.success'), 'ok');
         /*try {
