@@ -32,6 +32,11 @@ class HttpServer {
     }
 
     /**
+     * 此事件在Worker进程/Task进程启动时发生,这里创建的对象可以在进程生命周期内使用
+     * 在onWorkerStart中加载框架的核心文件后
+     * 1.不用每次请求都加载框架核心文件，提高性能
+     * 2.可以在后续的回调中继续使用框架的核心文件或者类库
+     *
      * @param $server
      * @param $worker_id
      */
