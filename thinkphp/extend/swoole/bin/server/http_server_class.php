@@ -74,6 +74,7 @@ class Http {
             }
         }
 
+        //将http对象传给调用者
         $_POST['http_server'] = $this->http;
 
         ob_start();
