@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/../svn.nuan-x.com/api.go-qxd.com/.idea/api.go-qxd.com.iml" filepath="$PROJECT_DIR$/../svn.nuan-x.com/api.go-qxd.com/.idea/api.go-qxd.com.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/swoole_mooc.iml" filepath="$PROJECT_DIR$/.idea/swoole_mooc.iml" />
     </modules>
   </component>
