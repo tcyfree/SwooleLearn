@@ -5,7 +5,7 @@
  * Date: 18/3/27
  * Time: 上午12:50
  */
-class Http {
+class HttpServer {
     CONST HOST = "0.0.0.0";
     CONST PORT = 9911;
 
@@ -136,4 +136,4 @@ class Http {
     }
 }
 
-new Http();
+new HttpServer();
