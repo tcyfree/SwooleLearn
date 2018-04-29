@@ -38,6 +38,7 @@ class Ws {
     }
 
     /**
+     * 设置进程名，为后续平滑重启进程
      * @param $server
      */
     public function onStart($server) {
