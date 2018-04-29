@@ -73,7 +73,7 @@ class Predis {
 
     /**
      * 基础类库优化，优化两个参数的方法（重要）
-     *
+     * 1.集合的添加和删除
      * @param $name
      * @param $arguments
      * @return array
