@@ -17,7 +17,7 @@ class Chart
             'user' => "用户".rand(0, 2000),
             'content' => $_POST['content'],
         ];
-        //  todo
+        //推荐使用connections这种方式，redis方式也可以
         foreach($_POST['http_server']->ports[1]->connections as $fd) {
             $_POST['http_server']->push($fd, json_encode($data));
         }
