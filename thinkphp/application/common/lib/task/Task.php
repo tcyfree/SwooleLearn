@@ -12,8 +12,10 @@ class Task {
 
     /**
      * 异步发送 验证码
+     *
      * @param $data
-     * @param $serv swoole server对象
+     * @param $serv
+     * @return bool
      */
     public function sendSms($data, $serv) {
         try {
